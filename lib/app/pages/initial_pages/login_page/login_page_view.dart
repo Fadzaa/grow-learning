@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
+import 'package:grow_learning/common/constant.dart';
 import '../../../../common/theme.dart';
 import '../../../router/app_pages.dart';
 import '../../global_component/common_button.dart';
@@ -22,7 +23,7 @@ class LoginPageView extends GetView<LoginPageController> {
                 children: [
                   Align(
                       alignment: Alignment.centerRight,
-                      child: SvgPicture.asset('assets/logo_horizontal.svg', width:125)
+                      child: SvgPicture.asset(icLogoHorizontal, width:125)
                   ),
 
                   const SizedBox(height: 20,),
@@ -46,7 +47,7 @@ class LoginPageView extends GetView<LoginPageController> {
                   CommonTextField(
                     controller: controller.emailController,
                     hintText: "Email",
-                    prefixIcon: 'assets/ic_mail.svg',
+                    prefixIcon: icMail,
                   ),
 
                   const SizedBox(height: 25,),
@@ -58,7 +59,7 @@ class LoginPageView extends GetView<LoginPageController> {
                   CommonTextField(
                     controller: controller.passwordController,
                     hintText: "Password",
-                    prefixIcon: 'assets/ic_lock_outline.svg',
+                    prefixIcon: icLockOutline,
                     isObscure: true,
                   ),
 
