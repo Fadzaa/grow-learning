@@ -1,17 +1,19 @@
-// import 'package:limatrack_genetic/app/pages/initial_pages/onboarding_page/model/onboard.dart';
-// import 'package:limatrack_genetic/common/constant.dart';
-//
-// final List <Onboard> onboard_data = [
-//   Onboard(
-//       image: onboardLocation,
-//       text: "Temukan Pedagang Favoritmu",
-//   ),
-//   Onboard(
-//       image: onboardFood,
-//       text: "Pesan Jajanan dan Langsung Ambil",
-//   ),
-//   Onboard(
-//       image: onboardSocmed,
-//       text: "Terhubung dengan Kuliner Lokal",
-//   )
-// ];
+import 'onboard.dart';
+
+final List <Onboard> onboard_data = [
+  Onboard(
+    image: 'assets/onboard_image.png',
+    text: "Grow Plant",
+    description: 'Grow your plants with love. take care of it until it grows big'
+  ),
+  Onboard(
+    image: 'assets/onboard_image.png',
+    text: "Focus Learning",
+    description: 'Stay focused on learning, your plant will stop grow if you leave the app'
+  ),
+  Onboard(
+    image: 'assets/onboard_image.png',
+    text: "Grow Learning",
+    description: 'Grow your knowledge and plants by staying focused on learning.'
+  )
+];
