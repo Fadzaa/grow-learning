@@ -93,7 +93,7 @@ class RegisterPageView extends GetView<RegisterPageController> {
                   CommonButton(
                     text: "Register",
                     onPressed: () {
-                      Get.offAllNamed(Routes.HOME_PAGE);
+                      Get.offAllNamed(Routes.OTP_VERIFICATION_PAGE);
                     },
                     height: 45,
                   ),
