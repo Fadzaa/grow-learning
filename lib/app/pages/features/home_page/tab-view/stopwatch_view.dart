@@ -15,7 +15,7 @@ class StopwatchView extends GetView<HomePageController> {
     return Column(
       mainAxisAlignment: MainAxisAlignment.spaceAround,
       children: [
-        SvgPicture.asset('assets/big_tree.svg', width: MediaQuery.of(context).size.width * 1),
+        SvgPicture.asset('assets/svg/big_tree.svg', width: MediaQuery.of(context).size.width * 1),
 
         Obx(() => Text(controller.countDown.value,
           style: GoogleFonts.urbanist(

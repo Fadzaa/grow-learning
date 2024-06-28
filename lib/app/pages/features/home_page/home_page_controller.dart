@@ -45,6 +45,4 @@ class HomePageController extends GetxController with SingleGetTickerProviderMixi
       }
     });
   }
-
-
 }
