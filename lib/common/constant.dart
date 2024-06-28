@@ -9,6 +9,7 @@ String imgAvatar = '${images}avatar.png';
 String icLogoPrimary = '${svgImages}logo_primary.svg';
 String icLogoHorizontal = '${svgImages}logo_horizontal.svg';
 String icMail = '${svgImages}ic_mail.svg';
+String icUser = '${svgImages}ic_user.svg';
 String icLockOutline = '${svgImages}ic_lock_outline.svg';
 
 

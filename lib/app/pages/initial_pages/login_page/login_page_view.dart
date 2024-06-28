@@ -38,7 +38,7 @@ class LoginPageView extends GetView<LoginPageController> {
                     color: blackColor,
                   ),),
 
-                  const SizedBox(height: 50,),
+                  const SizedBox(height: 40,),
 
                   Text("Email", style: tsBodyLarge.copyWith(
                       fontWeight: FontWeight.w600,
@@ -50,7 +50,7 @@ class LoginPageView extends GetView<LoginPageController> {
                     prefixIcon: icMail,
                   ),
 
-                  const SizedBox(height: 25,),
+                  const SizedBox(height: 15,),
 
                   Text("Password", style: tsBodyLarge.copyWith(
                     fontWeight: FontWeight.w600,
@@ -63,7 +63,7 @@ class LoginPageView extends GetView<LoginPageController> {
                     isObscure: true,
                   ),
 
-                  const SizedBox(height: 75,),
+                  const SizedBox(height: 50,),
 
                   CommonButton(
                     text: "Login",
