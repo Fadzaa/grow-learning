@@ -33,18 +33,18 @@ class AppPages {
     //   transition: Transition.fadeIn,
     //   transitionDuration: const Duration(milliseconds: 500),
     // ),
-    GetPage(
-      name: _Paths.SPLASH_PAGE,
-      page: () => const SplashPageView(),
-      binding: SplashPageBinding(),
-      transition: Transition.noTransition,
-    ),
-    GetPage(
-      name: _Paths.ONBOARDING_PAGE,
-      page: () => const OnboardingPageView(),
-      binding: OnboardingPageBinding(),
-      transition: Transition.noTransition,
-    ),
+    // GetPage(
+    //   name: _Paths.SPLASH_PAGE,
+    //   page: () => const SplashPageView(),
+    //   binding: SplashPageBinding(),
+    //   transition: Transition.noTransition,
+    // ),
+    // GetPage(
+    //   name: _Paths.ONBOARDING_PAGE,
+    //   page: () => const OnboardingPageView(),
+    //   binding: OnboardingPageBinding(),
+    //   transition: Transition.noTransition,
+    // ),
     GetPage(
       name: _Paths.REGISTER_PAGE,
       page: () => const RegisterPageView(),

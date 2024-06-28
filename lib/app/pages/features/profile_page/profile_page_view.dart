@@ -12,7 +12,6 @@ class ProfilePageView extends GetView<ProfilePageController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: baseColor,
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.all(20.0),
