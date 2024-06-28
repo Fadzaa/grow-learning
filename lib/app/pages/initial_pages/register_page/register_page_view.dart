@@ -15,7 +15,8 @@ class RegisterPageView extends GetView<RegisterPageController> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-          child: Padding(
+          child: Container(
+            color: Colors.white,
             padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 30),
             child: Column(
                 crossAxisAlignment: CrossAxisAlignment.stretch,
