@@ -1,4 +1,6 @@
 import 'package:get/get.dart';
+import '../pages/features/home_page/home_page_binding.dart';
+import '../pages/features/home_page/home_page_view.dart';
 import '../pages/initial_pages/login_page/login_page_binding.dart';
 import '../pages/initial_pages/login_page/login_page_view.dart';
 import '../pages/initial_pages/onboarding_page/onboarding_page_binding.dart';
@@ -13,26 +15,18 @@ import '../pages/initial_pages/splash_screen/splash_page_view.dart';
 part 'app_routes.dart';
 
 class AppPages {
-  // static var routes;
-
   AppPages._();
 
-  static const INITIAL = Routes.REGISTER_PAGE;
+  static const INITIAL = Routes.HOME_PAGE;
 
   static final routes = [
-    // GetPage(
-    //   name: _Paths.HOME_PAGE,
-    //   page: () => BottomNavigation(),
-    //   bindings:  [
-    //     HomePageBinding(),
-    //     ExplorePageBinding(),
-    //     OrderPageBinding(),
-    //     ChatPageBinding(),
-    //     ProfilePageBinding()
-    //   ],
-    //   transition: Transition.fadeIn,
-    //   transitionDuration: const Duration(milliseconds: 500),
-    // ),
+    GetPage(
+      name: _Paths.HOME_PAGE,
+      page: () => HomePageView(),
+      binding: HomePageBinding(),
+      transition: Transition.fadeIn,
+      transitionDuration: const Duration(milliseconds: 500),
+    ),
     GetPage(
       name: _Paths.SPLASH_PAGE,
       page: () => const SplashPageView(),
