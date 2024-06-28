@@ -3,10 +3,13 @@ String svgImages = 'assets/svg/';
 
 //CONSTANT IMAGE
 String imgAvatar = '${images}avatar.png';
+String imgFlame = '${images}flame.png';
+String imgDiamond = '${images}diamond.png';
 
 
 //CONSTANT SVG
-String icLogoPrimary = '${svgImages}tedikap_logo.svg';
+String icElectric = '${svgImages}ic_electric.svg';
+String icBadge = '${svgImages}ic_badge.svg';
 
 
 
