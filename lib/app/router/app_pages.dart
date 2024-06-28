@@ -21,6 +21,7 @@ class AppPages {
 
   static const INITIAL = Routes.LEADERBOARD_PAGE;
 
+
   static final routes = [
     // GetPage(
     //   name: _Paths.HOME_PAGE,
@@ -35,18 +36,18 @@ class AppPages {
     //   transition: Transition.fadeIn,
     //   transitionDuration: const Duration(milliseconds: 500),
     // ),
-    // GetPage(
-    //   name: _Paths.SPLASH_PAGE,
-    //   page: () => const SplashPageView(),
-    //   binding: SplashPageBinding(),
-    //   transition: Transition.noTransition,
-    // ),
-    // GetPage(
-    //   name: _Paths.ONBOARDING_PAGE,
-    //   page: () => const OnboardingPageView(),
-    //   binding: OnboardingPageBinding(),
-    //   transition: Transition.noTransition,
-    // ),
+    GetPage(
+      name: _Paths.SPLASH_PAGE,
+      page: () => const SplashPageView(),
+      binding: SplashPageBinding(),
+      transition: Transition.noTransition,
+    ),
+    GetPage(
+      name: _Paths.ONBOARDING_PAGE,
+      page: () => const OnboardingPageView(),
+      binding: OnboardingPageBinding(),
+      transition: Transition.noTransition,
+    ),
     GetPage(
       name: _Paths.LEADERBOARD_PAGE,
       page: () => const Leaderboard(),

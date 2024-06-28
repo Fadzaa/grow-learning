@@ -1,46 +1,46 @@
 List<UserList> data = [
   UserList(
-      userImage: "assets/user1.png",
+      userImage: "assets/image/user1.png",
       userName: "Yasa Kafi",
       userPoin: "1,899 Quiz Points",
       userDate: DateTime.now()),
   UserList(
-      userImage: "assets/user2.png",
+      userImage: "assets/image/user2.png",
       userName: "Yasa Kafi",
       userPoin: "1,899 Quiz Points",
       userDate: DateTime.now()),
   UserList(
-      userImage: "assets/user3.png",
+      userImage: "assets/image/user3.png",
       userName: "Yasa Kafi",
       userPoin: "1,899 Quiz Points",
       userDate: DateTime.now()),
   UserList(
-      userImage: "assets/user4.png",
+      userImage: "assets/image/user4.png",
       userName: "Yasa Kafi",
       userPoin: "1,899 Quiz Points",
       userDate: DateTime.now()),
   UserList(
-      userImage: "assets/user5.png",
+      userImage: "assets/image/user5.png",
       userName: "Yasa Kafi",
       userPoin: "1,899 Quiz Points",
       userDate: DateTime.now()),
   UserList(
-      userImage: "assets/user5.png",
+      userImage: "assets/image/user5.png",
       userName: "Yasa Kafi",
       userPoin: "1,899 Quiz Points",
       userDate: DateTime.now()),
   UserList(
-      userImage: "assets/user6.png",
+      userImage: "assets/image/user6.png",
       userName: "Yasa Kafi",
       userPoin: "1,899 Quiz Points",
       userDate: DateTime.now()),
   UserList(
-      userImage: "assets/user7.png",
+      userImage: "assets/image/user7.png",
       userName: "Yasa Kafi",
       userPoin: "1,899 Quiz Points",
       userDate: DateTime.now()),
   UserList(
-      userImage: "assets/user7.png",
+      userImage: "assets/image/user7.png",
       userName: "Yasa Kafi",
       userPoin: "1,899 Quiz Points",
       userDate: DateTime.now()),
