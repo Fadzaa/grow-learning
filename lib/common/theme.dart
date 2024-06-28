@@ -13,58 +13,58 @@ const Color warningColorLight = Color(0xFFFCFCDD);
 const Color dangerColor = Color(0xFFC62D00);
 
 //HEADING
- TextStyle tsHeadingLarge = GoogleFonts.poppins(
+TextStyle tsHeadingLarge = GoogleFonts.poppins(
   fontSize: 28,
   fontWeight: FontWeight.normal,
   color: blackColor,
 );
 
 
- TextStyle tsHeadingMedium = GoogleFonts.poppins(
+TextStyle tsHeadingMedium = GoogleFonts.poppins(
   fontSize: 26,
   fontWeight: FontWeight.normal,
   color: blackColor,
 );
 
- TextStyle tsHeadingSmall = GoogleFonts.poppins(
+TextStyle tsHeadingSmall = GoogleFonts.poppins(
   fontSize: 24,
   fontWeight: FontWeight.normal,
   color: blackColor,
 );
 
 //TITLE
- TextStyle tsTitleLarge = GoogleFonts.poppins(
+TextStyle tsTitleLarge = GoogleFonts.poppins(
   fontSize: 22,
   fontWeight: FontWeight.normal,
   color: blackColor,
 );
 
- TextStyle tsTitleMedium = GoogleFonts.poppins(
+TextStyle tsTitleMedium = GoogleFonts.poppins(
   fontSize: 20,
   fontWeight: FontWeight.normal,
   color: blackColor,
 );
 
- TextStyle tsTitleSmall = GoogleFonts.poppins(
+TextStyle tsTitleSmall = GoogleFonts.poppins(
   fontSize: 18,
   fontWeight: FontWeight.normal,
   color: blackColor,
 );
 
 //BODY
- TextStyle tsBodyLarge = GoogleFonts.poppins(
+TextStyle tsBodyLarge = GoogleFonts.poppins(
   fontSize: 16,
   fontWeight: FontWeight.normal,
   color: blackColor,
 );
 
- TextStyle tsBodyMedium = GoogleFonts.poppins(
+TextStyle tsBodyMedium = GoogleFonts.poppins(
   fontSize: 14,
   fontWeight: FontWeight.normal,
   color: blackColor,
 );
 
- TextStyle tsBodySmall = GoogleFonts.poppins(
+TextStyle tsBodySmall = GoogleFonts.poppins(
   fontSize: 12,
   fontWeight: FontWeight.normal,
   color: blackColor,
@@ -89,6 +89,3 @@ TextStyle tsLabelSmall = GoogleFonts.poppins(
   fontWeight: FontWeight.normal,
   color: blackColor,
 );
-
-
-

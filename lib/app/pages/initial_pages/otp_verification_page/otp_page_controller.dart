@@ -5,6 +5,8 @@ import 'package:get/get.dart';
 class OtpPageController extends GetxController {
   late Rx<TextEditingController> otpNumberController;
 
+  RxBool isEnabled = false.obs;
+
   //Initial String Value
   RxString countDown = '00:00'.obs;
 
