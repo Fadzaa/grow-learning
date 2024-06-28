@@ -25,7 +25,6 @@ class OtpPageView extends GetView<OtpPageController> {
 
 
     return Scaffold(
-      backgroundColor: baseColor,
       body: SafeArea(
           child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 30),

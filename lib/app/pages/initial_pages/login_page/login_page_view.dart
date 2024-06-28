@@ -8,7 +8,6 @@ class LoginPageView extends GetView<LoginPageController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: baseColor,
       body: SafeArea(
           child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 30),
