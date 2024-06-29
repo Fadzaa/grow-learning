@@ -74,15 +74,13 @@ class StatisticPage extends GetView<StatisticPageController> {
               SizedBox(
                 height: 25,
               ),
-              Container(
-                decoration:
-                    BoxDecoration(borderRadius: BorderRadius.circular(40)),
+              SizedBox(
+                height: 200,
                 child: SfCircularChart(
                   backgroundColor: Colors.white,
                   margin: EdgeInsets.symmetric(vertical: 0),
-                  //
                   borderWidth: 20,
-
+                  enableMultiSelection: true,
                   legend: Legend(
                     isVisible: true,
                     position: LegendPosition.right,
