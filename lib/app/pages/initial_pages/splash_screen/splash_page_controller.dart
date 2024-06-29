@@ -25,7 +25,7 @@ class SplashPageController extends GetxController {
       if (token != null) {
         Get.offAllNamed(Routes.HOME_PAGE);
       } else {
-        Get.offAllNamed(Routes.LOGIN_PAGE);
+        Get.offAllNamed(Routes.ONBOARDING_PAGE);
       }
     }
   }

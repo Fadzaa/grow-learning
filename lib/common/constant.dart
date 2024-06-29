@@ -31,6 +31,9 @@ String icProfile = '${svgImages}icon_profile.svg';
 String icLogout = '${svgImages}icon_logout.svg';
 String icClock = '${svgImages}icon_clock.svg';
 String icSearch = '${svgImages}icon_search.svg';
+String icOnboard1 = '${svgImages}icon_onboard_1.svg';
+String icOnboard2 = '${svgImages}icon_onboard_2.svg';
+String icOnboard3 = '${svgImages}icon_onboard_3.svg';
 
 
 

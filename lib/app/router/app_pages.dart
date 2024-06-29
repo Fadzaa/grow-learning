@@ -29,7 +29,7 @@ part 'app_routes.dart';
 class AppPages {
   AppPages._();
 
-  static const INITIAL = Routes.LIST_ACTIVITY_PAGE;
+  static const INITIAL = Routes.SPLASH_PAGE;
 
   static final routes = [
     GetPage(

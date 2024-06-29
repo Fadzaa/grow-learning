@@ -45,7 +45,7 @@ class RegisterPageView extends GetView<RegisterPageController> {
                   ),),
 
                   CommonTextField(
-                    controller: controller.emailController,
+                    controller: controller.nameController,
                     hintText: "Username",
                     prefixIcon: icUser,
                   ),
@@ -82,7 +82,7 @@ class RegisterPageView extends GetView<RegisterPageController> {
                   ),),
 
                   CommonTextField(
-                    controller: controller.passwordController,
+                    controller: controller.confirmPassController,
                     hintText: "Confirm Password",
                     prefixIcon: icLockOutline,
                     isObscure: true,

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:grow_learning/common/constant.dart';
 import '../../../../common/theme.dart';
 import 'model/onboard_data.dart';
 import 'onboarding_page_controller.dart';
@@ -24,7 +25,7 @@ class OnboardingPageView extends GetView<OnboardingPageController> {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        SvgPicture.asset('assets/logo_horizontal.svg', width: 125,),
+                        SvgPicture.asset(icLogoHorizontal, width: 125,),
                         TextButton(
                             onPressed: () => controller.skipOnboarding(),
                             child: Text(
