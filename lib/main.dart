@@ -6,7 +6,7 @@ import 'package:grow_learning/app/pages/features/ai_page/ai_page_controller.dart
 import 'app/router/app_pages.dart';
 
 
-
+List<String> data = [];
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
