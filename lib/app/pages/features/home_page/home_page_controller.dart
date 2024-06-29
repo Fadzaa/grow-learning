@@ -21,6 +21,7 @@ class HomePageController extends GetxController
   RxString path = "assets/image/golden_barrel_full.png".obs;
 
   RxBool IsStart = false.obs;
+  RxBool isStartTimer = false.obs;
 
   RxString namaMapel = "".obs;
 
@@ -32,8 +33,11 @@ class HomePageController extends GetxController
 
   late Timer _timer;
 
+
   RxString countDownTimer = '00:00'.obs;
   RxInt countTimer = 0.obs;
+
+  late Timer _timerTimer;
 
 
 
@@ -71,7 +75,6 @@ class HomePageController extends GetxController
     });
   }
 
-
   int timeToMinutes(String timeString) {
     List<String> parts = timeString.split(':');
     int hours = int.parse(parts[0]);
@@ -81,7 +84,6 @@ class HomePageController extends GetxController
   }
 
   void stopStopwatch() {
-
 
     Get.put(StatisticPageController()).chartData.add(GDPData(name.value, timeToMinutes(countDown.value)));
     IsStart.value = false;
@@ -99,6 +101,7 @@ class HomePageController extends GetxController
   }
 
   void startTimer() {
+    isStartTimer.value = true;
     const oneSec = Duration(seconds: 1);
     Timer.periodic(oneSec, (Timer timer) {
       countTimer.value--;
@@ -109,10 +112,28 @@ class HomePageController extends GetxController
 
       if(second < 10) {
         countDownTimer.value = '0$minute:0$second';
-      } else {
+      }
+      else {
         countDownTimer.value = '0$minute:$second';
       }
     });
+  }
+
+  void stopTimer() {
+    isStartTimer.value = false;
+    countTimer.value = 0;
+    countDownTimer.value = '00:00';
+
+    _timerTimer.cancel();
+
+    Get.put(StatisticPageController()).chartData.add(GDPData(name.value, timeToMinutes(countDown.value)));
+
+    var dataToSend = {
+      'name': name.value,
+      'path': path.value,
+      'countdown': countDownTimer.value
+    };
+    Get.toNamed("/activity-done-page", arguments: dataToSend);
   }
 
   RxBool isActivitySelected = false.obs;
