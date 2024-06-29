@@ -1,6 +1,8 @@
 import 'package:get/get.dart';
 import 'package:grow_learning/app/pages/features/ai_page/ai_page_binding.dart';
 import 'package:grow_learning/app/pages/features/ai_page/ai_page_view.dart';
+import 'package:grow_learning/app/pages/features/friends_page/friends_page_binding.dart';
+import 'package:grow_learning/app/pages/features/friends_page/friends_page_view.dart';
 
 
 import 'package:grow_learning/app/pages/features/profile_page/profile_page_binding.dart';
