@@ -1,4 +1,6 @@
 import 'package:get/get.dart';
+import 'package:grow_learning/app/pages/features/friends_page/friends_page_binding.dart';
+import 'package:grow_learning/app/pages/features/friends_page/friends_page_view.dart';
 
 
 import 'package:grow_learning/app/pages/features/profile_page/profile_page_binding.dart';
@@ -29,7 +31,7 @@ part 'app_routes.dart';
 class AppPages {
   AppPages._();
 
-  static const INITIAL = Routes.LIST_ACTIVITY_PAGE;
+  static const INITIAL = Routes.PROFILE_PAGE;
 
   static final routes = [
     GetPage(
@@ -85,6 +87,12 @@ class AppPages {
       name: _Paths.ACTIVITY_DONE_PAGE,
       page: () => const ActivityDonePageView(),
       binding: ActivityDonePageBinding(),
+      transition: Transition.noTransition,
+    ),
+    GetPage(
+      name: _Paths.FRIENDS_PAGE,
+      page: () =>  FriendsPageView(),
+      binding: FriendsPageBinding(),
       transition: Transition.noTransition,
     ),
   ];

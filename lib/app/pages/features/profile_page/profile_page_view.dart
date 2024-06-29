@@ -3,9 +3,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
+import 'package:grow_learning/app/pages/features/friends_page/friends_page_controller.dart';
 import '../../../../common/constant.dart';
 import '../../../../common/dimensions.dart';
 import '../../../../common/theme.dart';
+import '../../../router/app_pages.dart';
 import 'profile_page_controller.dart';
 
 class ProfilePageView extends GetView<ProfilePageController> {
@@ -14,6 +16,7 @@ class ProfilePageView extends GetView<ProfilePageController> {
   });
 
   final ValueNotifier<double> _valueNotifier = ValueNotifier<double>(0);
+  final FriendsPageController friendsPageController = Get.put(FriendsPageController());
 
   int i = 0;
 
@@ -143,14 +146,8 @@ class ProfilePageView extends GetView<ProfilePageController> {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Text('Friends', style: tsTitleSmall.copyWith(color: blackColor, fontWeight: FontWeight.w600),),
-                      Row(
-                        children: [
-                          Icon(Icons.add, size: 24,),
-                          SizedBox(width: 10,),
-                          Text('Add Friends', style: tsTitleSmall.copyWith(color: blackColor, fontWeight: FontWeight.w600),),
-                        ],
-                      ),
+                      Text('Friends (${friendsPageController.list_friend.length})', style: tsTitleSmall.copyWith(color: blackColor, fontWeight: FontWeight.w600),),
+                      IconButton(onPressed: ()=> Get.toNamed(Routes.FRIENDS_PAGE), icon: Icon(Icons.arrow_forward_ios_rounded, size: 24,)),
                     ],
                   ),
                 ),
