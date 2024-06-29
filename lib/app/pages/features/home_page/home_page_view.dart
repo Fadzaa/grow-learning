@@ -8,6 +8,7 @@ import 'package:grow_learning/app/router/app_pages.dart';
 import 'package:grow_learning/common/constant.dart';
 import 'package:grow_learning/common/theme.dart';
 import 'home_page_controller.dart';
+import 'model/drawer_data.dart';
 
 class HomePageView extends GetView<HomePageController> {
   HomePageView({super.key});
@@ -18,12 +19,13 @@ class HomePageView extends GetView<HomePageController> {
 
     return Scaffold(
       key: _scaffoldKey,
+      backgroundColor: Colors.white,
       body: SafeArea(
-        child: Padding(
-          padding: const EdgeInsets.all(35),
-          child: Column(
-            children: [
-              Row(
+        child: Column(
+          children: [
+            Padding(
+              padding: const EdgeInsets.only(left: 35, right: 35, top: 35),
+              child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   InkWell(
@@ -34,14 +36,6 @@ class HomePageView extends GetView<HomePageController> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Text(
-                        'Dodi Wicakson',
-                        style: GoogleFonts.urbanist(
-                          fontSize: 16,
-                          color: blackColor,
-                          fontWeight: FontWeight.w500
-                        ),
-                      ),
 
                       const SizedBox(width: 20,),
 
@@ -50,50 +44,69 @@ class HomePageView extends GetView<HomePageController> {
                   )
                 ],
               ),
+            ),
 
-              const SizedBox(height: 30,),
+            const SizedBox(height: 30,),
 
-              TabBar(
-                  indicatorSize: TabBarIndicatorSize.label,
-                  indicatorColor: primaryColor,
-                  labelColor: primaryColor,
-                  unselectedLabelColor: const Color(0xFF707070).withOpacity(0.7),
-                  labelStyle: tsBodyMedium.copyWith(
-                      fontWeight: FontWeight.w600
+            TabBar(
+                indicatorSize: TabBarIndicatorSize.label,
+                indicatorColor: primaryColor,
+                labelColor: primaryColor,
+                unselectedLabelColor: const Color(0xFF707070).withOpacity(0.7),
+                labelStyle: tsBodyMedium.copyWith(
+                    fontWeight: FontWeight.w600
+                ),
+                unselectedLabelStyle: tsBodyMedium.copyWith(
+                    fontWeight: FontWeight.w600
+                ),
+                dividerColor: Colors.transparent,
+                tabAlignment: TabAlignment.center,
+                labelPadding: const EdgeInsets.only(right: 20),
+                overlayColor: MaterialStateProperty.all(Colors.transparent),
+                isScrollable: false,
+                controller: controller.tabController,
+                tabs: [
+                  SizedBox(
+                      width: MediaQuery.of(context).size.width * 0.35,
+                      child: const Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Icon(Icons.hourglass_empty),
+
+                          SizedBox(width: 10,),
+
+                          Tab(text: "Stopwatch"),
+                        ],
+                      )
                   ),
-                  unselectedLabelStyle: tsBodyMedium.copyWith(
-                      fontWeight: FontWeight.w600
+                  SizedBox(
+                      width: MediaQuery.of(context).size.width * 0.35,
+                      child: const Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Icon(Icons.watch_later_outlined),
+
+                          SizedBox(width: 10,),
+
+                          Tab(text: "Timer"),
+                        ],
+                      )
                   ),
-                  dividerColor: Colors.transparent,
-                  tabAlignment: TabAlignment.center,
-                  labelPadding: const EdgeInsets.only(right: 20),
-                  overlayColor: MaterialStateProperty.all(Colors.transparent),
-                  isScrollable: false,
+                ]
+            ),
+
+            const SizedBox(height: 20,),
+
+            Expanded(
+              child: TabBarView(
                   controller: controller.tabController,
-                  tabs: [
-                    SizedBox(
-                        width: MediaQuery.of(context).size.width * 0.35,
-                        child: Tab(text: "Stopwatch")),
-                    SizedBox(
-                        width: MediaQuery.of(context).size.width * 0.35,
-                        child: Tab(text: "Timer")
-                    ),
+                  children: [
+                    const StopwatchView(),
+                    Container(child: Center(child: Text('Timer'),))
                   ]
               ),
-
-              const SizedBox(height: 20,),
-
-              Expanded(
-                child: TabBarView(
-                    controller: controller.tabController,
-                    children: [
-                      StopwatchView(),
-                      Container(child: Center(child: Text('Timer'),))
-                    ]
-                ),
-              )
-            ]
-          ),
+            )
+          ]
         )
       ),
       drawer: Drawer(
@@ -101,7 +114,7 @@ class HomePageView extends GetView<HomePageController> {
         backgroundColor: Colors.white,
         child: Expanded(
           child: ListView(
-            padding: EdgeInsets.symmetric(horizontal: 5),
+            padding: const EdgeInsets.symmetric(horizontal: 5),
             children: <Widget>[
               DrawerHeader(
                 child: Row(
@@ -134,61 +147,28 @@ class HomePageView extends GetView<HomePageController> {
                 ),
               ),
 
-              ListTile(
-                title: Row(
-                  children: [
-                    SvgPicture.asset(icHome, width: 25),
-                    const SizedBox(width: 20,),
-                    Text('Home', style: GoogleFonts.urbanist(
-                        fontSize: 18,
-                        color: greyColor,
-                        fontWeight: FontWeight.w600
-                    ),)
-                  ],
-                ),
+              ListView.builder(
+                itemCount: drawerData.length,
+                shrinkWrap: true,
+                physics: const NeverScrollableScrollPhysics(),
+                itemBuilder: (context, index) => ListTile(
+                    title: Row(
+                      children: [
+                        SvgPicture.asset(drawerData[index].icon, width: 25, color: greyColor,),
+                        const SizedBox(width: 20,),
+                        Text(drawerData[index].title, style: GoogleFonts.urbanist(
+                            fontSize: 18,
+                            color: greyColor,
+                            fontWeight: FontWeight.w600
+                        ),)
+                      ],
+                    ),
 
-                onTap: () {
-                  Navigator.pop(context);
-                },
+                    onTap: () => Get.toNamed(drawerData[index].route),
+                  ),
               ),
 
-              ListTile(
-                title: Row(
-                  children: [
-                    SvgPicture.asset(icInsight, width: 25),
-                    const SizedBox(width: 20,),
-                    Text('Insight', style: GoogleFonts.urbanist(
-                        fontSize: 18,
-                        color: greyColor,
-                        fontWeight: FontWeight.w600
-                    ),)
-                  ],
-                ),
-
-                onTap: () {
-                  Navigator.pop(context);
-                },
-              ),
-
-              ListTile(
-                title: Row(
-                  children: [
-                    SvgPicture.asset(icProfile, width: 25),
-                    const SizedBox(width: 20,),
-                    Text('Profile', style: GoogleFonts.urbanist(
-                        fontSize: 18,
-                        color: greyColor,
-                        fontWeight: FontWeight.w600
-                    ),)
-                  ],
-                ),
-
-                onTap: () {
-                  Navigator.pop(context);
-                },
-              ),
-
-              SizedBox(height: MediaQuery.of(context).size.height * 0.55),
+              SizedBox(height: MediaQuery.of(context).size.height * 0.4),
 
               ListTile(
                 title: Row(
@@ -204,8 +184,6 @@ class HomePageView extends GetView<HomePageController> {
                 ),
                 onTap: () => Get.offAllNamed(Routes.LOGIN_PAGE),
               ),
-
-
             ],
           ),
         )
