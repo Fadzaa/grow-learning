@@ -13,6 +13,7 @@ String icElectric = '${svgImages}ic_electric.svg';
 String icBadge = '${svgImages}ic_badge.svg';
 String onboardImage = '${images}onboard_image.png';
 String userAvatar = '${images}user_avatar.png';
+String bonsai = '${images}bonsai.png';
 String plantGoldenBarrelFull = '${images}plant_golden_barrel_full.png';
 
 
@@ -31,6 +32,11 @@ String icProfile = '${svgImages}icon_profile.svg';
 String icLogout = '${svgImages}icon_logout.svg';
 String icClock = '${svgImages}icon_clock.svg';
 String icSearch = '${svgImages}icon_search.svg';
+String icFriend = '${svgImages}icon_friends.svg';
+String icLeaderboard = '${svgImages}icon_leaderboard.svg';
+String icTag = '${svgImages}icon_tag.svg';
+String icStopwatch = '${svgImages}icon_stopwatch.svg';
+String icTimer = '${svgImages}icon_timer.svg';
 String icOnboard1 = '${svgImages}icon_onboard_1.svg';
 String icOnboard2 = '${svgImages}icon_onboard_2.svg';
 String icOnboard3 = '${svgImages}icon_onboard_3.svg';
