@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
+import 'package:grow_learning/common/constant.dart';
 import 'splash_page_controller.dart';
 
 
@@ -12,7 +13,7 @@ class SplashPageView extends GetView<SplashPageController> {
     return Scaffold(
       body: Center(
         child: SvgPicture.asset(
-          'assets/logo_primary.svg',
+          icLogoPrimary,
           width: 150,
           height: 151,
         )

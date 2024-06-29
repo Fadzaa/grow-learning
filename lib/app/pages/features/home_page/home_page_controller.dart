@@ -1,7 +1,11 @@
 import 'dart:async';
+import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+
+import '../list_activity_page/model/activity.dart';
+import '../list_activity_page/model/activity_data.dart';
 
 
 
@@ -11,7 +15,6 @@ class HomePageController extends GetxController with SingleGetTickerProviderMixi
 
   //Initial String Value
   RxString countDown = '00:00'.obs;
-
   RxInt count = 0.obs;
 
   @override
@@ -44,5 +47,37 @@ class HomePageController extends GetxController with SingleGetTickerProviderMixi
         countDown.value = '0$minute:$second';
       }
     });
+  }
+
+  RxBool isActivitySelected = false.obs;
+  TextEditingController searchController = TextEditingController();
+  TextEditingController activityController = TextEditingController();
+  RxList<Activity> list_activity = activity_data;
+  Activity selectedActivity = Activity(title: '', color: Colors.white);
+
+  void selectActivity() {
+    isActivitySelected.value = true;
+
+  }
+
+  void addActivity() {
+    final random = Random();
+    final color = Color.fromRGBO(
+      random.nextInt(256),
+      random.nextInt(256),
+      random.nextInt(256),
+      1,
+    );
+
+    activity_data.add(
+      Activity(title: activityController.text, color: color),
+    );
+
+    print(activity_data);
+  }
+
+  void searchActivity(String value) {
+    list_activity.value = list_activity.where((element) => element.title.contains(value)).toList();
+    update();
   }
 }
