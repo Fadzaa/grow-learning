@@ -1,4 +1,6 @@
 import 'package:get/get.dart';
+import '../pages/features/list_activity_page/list_activity_binding.dart';
+import '../pages/features/list_activity_page/list_activity_page.dart';
 import '../pages/features/home_page/home_page_binding.dart';
 import '../pages/features/home_page/home_page_view.dart';
 import '../pages/initial_pages/login_page/login_page_binding.dart';
@@ -17,7 +19,7 @@ part 'app_routes.dart';
 class AppPages {
   AppPages._();
 
-  static const INITIAL = Routes.HOME_PAGE;
+  static const INITIAL = Routes.LIST_ACTIVITY_PAGE;
 
   static final routes = [
     GetPage(
@@ -55,6 +57,12 @@ class AppPages {
       name: _Paths.OTP_VERIFICATION_PAGE,
       page: () => const OtpPageView(),
       binding: OtpPageBinding(),
+      transition: Transition.noTransition,
+    ),
+    GetPage(
+      name: _Paths.LIST_ACTIVITY_PAGE,
+      page: () => ListActivityView(),
+      binding: ListActivityBinding(),
       transition: Transition.noTransition,
     ),
   ];

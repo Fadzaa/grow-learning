@@ -20,6 +20,7 @@ String icHome = '${svgImages}icon_home.svg';
 String icInsight = '${svgImages}icon_insight.svg';
 String icProfile = '${svgImages}icon_profile.svg';
 String icLogout = '${svgImages}icon_logout.svg';
+String icSearch = '${svgImages}icon_search.svg';
 
 
 
