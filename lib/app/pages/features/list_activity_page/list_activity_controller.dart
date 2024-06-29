@@ -11,6 +11,12 @@ class ListActivityController extends GetxController with SingleGetTickerProvider
   TextEditingController searchController = TextEditingController();
   TextEditingController activityController = TextEditingController();
   RxList<Activity> list_activity = activity_data;
+  RxList<Activity> all_activity = activity_data;
+
+  @override
+  void onInit() {
+    super.onInit();
+  }
 
   void selectActivity() {
     isActivitySelected.value = true;
@@ -33,8 +39,16 @@ class ListActivityController extends GetxController with SingleGetTickerProvider
   }
 
   void searchActivity(String value) {
-    list_activity.value = list_activity.where((element) => element.title.contains(value)).toList();
-    update();
-  }
+    if (value.isEmpty) {
+      print('activity data : ');
+      print(activity_data);
 
+      list_activity.assignAll(all_activity);
+    } else {
+      print('activity data : ');
+      print(activity_data);
+
+      list_activity.assignAll(all_activity.where((element) => element.title.contains(value)).toList());
+    }
+  }
 }

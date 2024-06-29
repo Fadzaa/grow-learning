@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:grow_learning/app/pages/global_component/common_textfield.dart';
+import 'package:grow_learning/app/router/app_pages.dart';
 import 'package:grow_learning/common/constant.dart';
 import 'package:grow_learning/common/theme.dart';
 import 'list_activity_controller.dart';
@@ -20,7 +21,12 @@ class ListActivityView extends GetView<ListActivityController> {
             children: [
               Row(
                 children: [
-                  const Icon(Icons.arrow_back_ios, color: blackColor, size: 25,),
+                  InkWell(
+                    onTap: () {
+                      Get.offAllNamed(Routes.HOME_PAGE);
+                    },
+                    child: const Icon(Icons.arrow_back_ios, color: blackColor, size: 25,),
+                  ),
 
                   const Spacer(),
                   
