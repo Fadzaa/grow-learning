@@ -1,9 +1,15 @@
 import 'package:get/get.dart';
 
+
 import 'package:grow_learning/app/pages/features/profile_page/profile_page_binding.dart';
 import 'package:grow_learning/app/pages/features/profile_page/profile_page_view.dart';
+
+import 'package:grow_learning/app/pages/features/leaderboard_page/leader_page_binding.dart';
+import 'package:grow_learning/app/pages/features/leaderboard_page/leader_page_view.dart';
+
 import '../pages/features/home_page/home_page_binding.dart';
 import '../pages/features/home_page/home_page_view.dart';
+
 import '../pages/initial_pages/login_page/login_page_binding.dart';
 import '../pages/initial_pages/login_page/login_page_view.dart';
 import '../pages/initial_pages/onboarding_page/onboarding_page_binding.dart';
@@ -21,7 +27,8 @@ class AppPages {
   AppPages._();
 
 
-  static const INITIAL = Routes.PROFILE_PAGE;
+
+  static const INITIAL = Routes.HOME_PAGE;
 
 
   static final routes = [
@@ -42,6 +49,12 @@ class AppPages {
       name: _Paths.ONBOARDING_PAGE,
       page: () => const OnboardingPageView(),
       binding: OnboardingPageBinding(),
+      transition: Transition.noTransition,
+    ),
+    GetPage(
+      name: _Paths.LEADERBOARD_PAGE,
+      page: () => const Leaderboard(),
+      binding: LeaderPageBinding(),
       transition: Transition.noTransition,
     ),
     GetPage(
