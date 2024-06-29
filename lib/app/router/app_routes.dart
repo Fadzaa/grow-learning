@@ -9,6 +9,7 @@ abstract class Routes {
   static const LOGIN_PAGE = _Paths.LOGIN_PAGE;
   static const REGISTER_PAGE = _Paths.REGISTER_PAGE;
   static const OTP_VERIFICATION_PAGE = _Paths.OTP_VERIFICATION_PAGE;
+  static const LIST_ACTIVITY_PAGE = _Paths.LIST_ACTIVITY_PAGE;
   static const PROFILE_PAGE = _Paths.PROFILE_PAGE;
 }
 
@@ -22,4 +23,5 @@ abstract class _Paths {
   static const REGISTER_PAGE = '/register-page';
   static const OTP_VERIFICATION_PAGE = '/otp-page';
   static const PROFILE_PAGE = '/profile-page';
+  static const LIST_ACTIVITY_PAGE = '/list-activity-page';
 }

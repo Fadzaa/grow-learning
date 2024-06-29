@@ -11,11 +11,15 @@ class CommonTextField extends StatelessWidget {
     required this.hintText,
     required this.prefixIcon,
     this.isObscure,
+    this.onSubmitted,
   });
 
   TextEditingController controller;
   String hintText, prefixIcon;
   bool? isObscure;
+  Function(String)? onSubmitted;
+
+
 
 
   @override
@@ -23,6 +27,7 @@ class CommonTextField extends StatelessWidget {
     return Container(
       margin: EdgeInsets.symmetric(vertical: 10),
       child: TextField(
+        onSubmitted: onSubmitted,
         controller: controller,
         obscureText: isObscure ?? false,
         style: tsLabelLarge,
