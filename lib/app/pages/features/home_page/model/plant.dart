@@ -1,7 +1,7 @@
-class Plant {
+class PlantData {
   final String name, image;
 
-  Plant({
+  PlantData({
     required this.name,
     required this.image,
   });
