@@ -34,10 +34,10 @@ class ActivityDonePageView extends GetView<ActivityDonePageController> {
                     textAlign: TextAlign.center,
                   ),),
 
-                  Image.asset(controller.urlPlant.value, height: 150),
+                  Image.asset(controller.path.value, height: 150),
 
                   Obx(() => Text(
-                    controller.isGrow.value ? '+${controller.quantityPlant.value} ${controller.namePlant} \nditambahkan ke koleksimu' : '+0 ${controller.namePlant}',
+                    controller.isGrow.value ? '+${controller.quantityPlant.value} ${controller.namePlant} \nditambahkan ke koleksimu' : '+1 ${controller.name.value}',
                     style: tsBodyLarge.copyWith(
                       fontWeight: FontWeight.w400,
                     ),
@@ -60,7 +60,7 @@ class ActivityDonePageView extends GetView<ActivityDonePageController> {
                           children: [
                             SvgPicture.asset(icElectric, width: 30, height: 30,),
                             SizedBox(height: 15,),
-                            Text('${controller.xp.value}', style: tsBodyLarge.copyWith(color: blackColor, fontWeight: FontWeight.w600),),
+                            Text('${controller.xpCounter(controller.countDown.toString())}', style: tsBodyLarge.copyWith(color: blackColor, fontWeight: FontWeight.w600),),
                             SizedBox(height: 10,),
                             Text('XP TOTAL', style: tsBodySmall.copyWith(color: Color(0xFFC5C5C5), fontWeight: FontWeight.w600),),
                           ],
@@ -82,7 +82,7 @@ class ActivityDonePageView extends GetView<ActivityDonePageController> {
                           children: [
                             SvgPicture.asset(icClock, width: 30, height: 30,),
                             SizedBox(height: 15,),
-                            Text('${controller.time.value}', style: tsBodyLarge.copyWith(color: blackColor, fontWeight: FontWeight.w600),),
+                            Text('${controller.countDown.value}', style: tsBodyLarge.copyWith(color: blackColor, fontWeight: FontWeight.w600),),
                             SizedBox(height: 10,),
                             Text('FOCUS TIME', style: tsBodySmall.copyWith(color: Color(0xFFC5C5C5), fontWeight: FontWeight.w600),),
                           ],

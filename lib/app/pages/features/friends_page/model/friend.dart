@@ -1,5 +1,3 @@
-import 'dart:ui';
-
 class Friend {
   final String title;
   final String image;

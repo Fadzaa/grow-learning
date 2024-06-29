@@ -182,7 +182,7 @@ class ProfilePageView extends GetView<ProfilePageController> {
                               color: blackColor, fontWeight: FontWeight.w600),);
                       }),
                       IconButton(
-                          onPressed: () => Get.toNamed(Routes.FRIENDS_PAGE),
+                          onPressed: () => Get.toNamed('Routes.FRIENDS_PAGE'),
                           icon: Icon(
                             Icons.arrow_forward_ios_rounded, size: 24,)),
                     ],
