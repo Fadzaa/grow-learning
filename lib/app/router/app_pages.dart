@@ -7,6 +7,8 @@ import 'package:grow_learning/app/pages/features/profile_page/profile_page_view.
 import 'package:grow_learning/app/pages/features/leaderboard_page/leader_page_binding.dart';
 import 'package:grow_learning/app/pages/features/leaderboard_page/leader_page_view.dart';
 
+import '../pages/features/activity_done_page/activity_done_page_binding.dart';
+import '../pages/features/activity_done_page/activity_done_page_view.dart';
 import '../pages/features/list_activity_page/list_activity_binding.dart';
 import '../pages/features/list_activity_page/list_activity_page.dart';
 import '../pages/features/home_page/home_page_binding.dart';
@@ -77,6 +79,12 @@ class AppPages {
       name: _Paths.LIST_ACTIVITY_PAGE,
       page: () => ListActivityView(),
       binding: ListActivityBinding(),
+      transition: Transition.noTransition,
+    ),
+    GetPage(
+      name: _Paths.ACTIVITY_DONE_PAGE,
+      page: () => const ActivityDonePageView(),
+      binding: ActivityDonePageBinding(),
       transition: Transition.noTransition,
     ),
   ];
