@@ -4,6 +4,7 @@ abstract class Routes {
   Routes._();
   static const SPLASH_PAGE = _Paths.SPLASH_PAGE;
   static const HOME_PAGE = _Paths.HOME_PAGE;
+  static const STATISTIK_PAGE = _Paths.STATISTIK_PAGE;
   static const AI_PAGE = _Paths.AI_PAGE;
   static const ONBOARDING_PAGE = _Paths.ONBOARDING_PAGE;
   static const LEADERBOARD_PAGE = _Paths.LEADERBOARD_PAGE;
@@ -22,4 +23,5 @@ abstract class _Paths {
   static const LOGIN_PAGE = '/login-page';
   static const REGISTER_PAGE = '/register-page';
   static const OTP_VERIFICATION_PAGE = '/otp-page';
+  static const STATISTIK_PAGE = '/statistic-page';
 }
