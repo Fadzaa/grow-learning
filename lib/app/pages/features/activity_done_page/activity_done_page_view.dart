@@ -26,8 +26,6 @@ class ActivityDonePageView extends GetView<ActivityDonePageController> {
                       fontWeight: FontWeight.w600
                   ),),
 
-                  const SizedBox(height: 20,),
-
                   Obx(() => Text(
                     controller.isGrow.value ? 'Selamat, kamu berhasil merawat tanamanmu dengan baik' : 'Sayang sekali, tanamanmu tidak tumbuh dengan baik',
                     style: tsTitleSmall.copyWith(
@@ -36,11 +34,7 @@ class ActivityDonePageView extends GetView<ActivityDonePageController> {
                     textAlign: TextAlign.center,
                   ),),
 
-                  const SizedBox(height: 20,),
-
                   Image.asset(controller.urlPlant.value, height: 150),
-
-                  const SizedBox(height: 20,),
 
                   Obx(() => Text(
                     controller.isGrow.value ? '+${controller.quantityPlant.value} ${controller.namePlant} \nditambahkan ke koleksimu' : '+0 ${controller.namePlant}',
@@ -64,7 +58,7 @@ class ActivityDonePageView extends GetView<ActivityDonePageController> {
                           mainAxisAlignment: MainAxisAlignment.center,
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
-                            // Image.asset(imgFlame, width: 30, height: 30,),
+                            SvgPicture.asset(icElectric, width: 30, height: 30,),
                             SizedBox(height: 15,),
                             Text('${controller.xp.value}', style: tsBodyLarge.copyWith(color: blackColor, fontWeight: FontWeight.w600),),
                             SizedBox(height: 10,),
