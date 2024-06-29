@@ -14,8 +14,13 @@ String icBadge = '${svgImages}ic_badge.svg';
 String onboardImage = '${images}onboard_image.png';
 String userAvatar = '${images}user_avatar.png';
 String bonsai = '${images}bonsai.png';
+String plantBonsaiFull = '${images}plant_bonsai_full.png';
 String plantGoldenBarrelFull = '${images}plant_golden_barrel_full.png';
-
+String plantCereusFull = '${images}plant_cereus_full.png';
+String plantGeraniumFull = '${images}plant_geranium_full.png';
+String plantSukulenFull = '${images}plant_sukulen_full.png';
+String plantMonsterraFull = '${images}plant_monsterra_full.png';
+String plantBonsaiHalf = '${images}plant_bonsai_half.png';
 
 //CONSTANT SVG
 String icLogoPrimary = '${svgImages}logo_primary.svg';
