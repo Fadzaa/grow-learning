@@ -6,30 +6,17 @@ import 'package:grow_learning/common/constant.dart';
 import 'friend.dart';
 
 RxList<Friend> friend_data = [
+
   Friend(
-      title: 'Fuad Jmk',
+      title: 'Nopal Jmk',
       image: imgAvatar,
-      poin: '200'
+      poin: '600'
   ),
   Friend(
-      title: 'Rudi Jmk',
-      image: imgAvatar,
-      poin: '100',
+    title: 'Tronot Jmk',
+    image: imgAvatar,
+    poin: '600',
   ),
-  Friend(
-      title: 'Agus Jmk',
-      image: imgAvatar,
-      poin: '100',
-  ),
-  Friend(
-      title: 'Bagas Jmk',
-      image: imgAvatar,
-      poin: '100',
-  ),
-  Friend(
-      title: 'Budi Jmk',
-      image: imgAvatar,
-      poin: '100',
-  ),
+
 
 ].obs;

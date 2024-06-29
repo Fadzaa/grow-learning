@@ -7,9 +7,9 @@ import 'model/friend_suggestion_data.dart';
 
 class FriendsPageController extends GetxController {
   TextEditingController searchController = TextEditingController();
-  RxList<Friend> list_friend = friend_data;
   RxList<Friend> all_friends = friend_data;
   RxList<Friend> suggestion_friends = friend_suggestion_data;
+  RxList<Friend> combined_list = <Friend>[].obs;
 
   @override
   void onInit() {
@@ -17,15 +17,23 @@ class FriendsPageController extends GetxController {
     searchController.addListener(() {
       searchActivity(searchController.text);
     });
+    combined_list.assignAll(all_friends);
   }
 
   void searchActivity(String value) {
     if (value.isEmpty) {
-      list_friend.assignAll(all_friends); // Reset to original list if search field is empty
+      combined_list.assignAll(all_friends);
     } else {
-      list_friend.assignAll(all_friends.where((element) => element.title.contains(value)).toList());
+      combined_list.assignAll(all_friends.where((element) => element.title.contains(value)).toList());
     }
   }
+
+  void addFriend(Friend friend) {
+    all_friends.add(friend);
+    suggestion_friends.remove(friend);
+    combined_list.assignAll(all_friends);
+  }
 }
+
 
 

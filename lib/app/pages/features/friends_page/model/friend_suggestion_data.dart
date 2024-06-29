@@ -7,14 +7,29 @@ import 'friend.dart';
 
 RxList<Friend> friend_suggestion_data = [
   Friend(
-      title: 'Nopal Jmk',
+      title: 'Fuad Jmk',
       image: imgAvatar,
-      poin: '600'
+      poin: '200'
   ),
   Friend(
-    title: 'Tronot Jmk',
+    title: 'Rudi Jmk',
     image: imgAvatar,
-    poin: '600',
+    poin: '100',
+  ),
+  Friend(
+    title: 'Agus Jmk',
+    image: imgAvatar,
+    poin: '100',
+  ),
+  Friend(
+    title: 'Bagas Jmk',
+    image: imgAvatar,
+    poin: '100',
+  ),
+  Friend(
+    title: 'Budi Jmk',
+    image: imgAvatar,
+    poin: '100',
   ),
 
 ].obs;
