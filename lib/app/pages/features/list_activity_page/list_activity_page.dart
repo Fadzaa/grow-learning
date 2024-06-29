@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:grow_learning/app/pages/features/list_activity_page/model/activity_data.dart';
 import 'package:grow_learning/app/pages/global_component/common_textfield.dart';
 import 'package:grow_learning/common/constant.dart';
 import 'package:grow_learning/common/theme.dart';
@@ -40,11 +39,11 @@ class ListActivityView extends GetView<ListActivityController> {
               const SizedBox(height: 30,),
 
               CommonTextField(
-                  controller: controller.searchController,
-                  hintText: 'Search Activity',
-                  prefixIcon: icSearch,
+                controller: controller.searchController,
+                hintText: 'Search Activity',
+                prefixIcon: icSearch,
                 onSubmitted: (value) {
-                    controller.searchActivity(value);
+                  controller.searchActivity(value);
                 },
               ),
 

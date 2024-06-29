@@ -13,6 +13,7 @@ String icElectric = '${svgImages}ic_electric.svg';
 String icBadge = '${svgImages}ic_badge.svg';
 String onboardImage = '${images}onboard_image.png';
 String userAvatar = '${images}user_avatar.png';
+String bonsai = '${images}bonsai.png';
 
 
 //CONSTANT SVG
@@ -29,9 +30,8 @@ String icInsight = '${svgImages}icon_insight.svg';
 String icProfile = '${svgImages}icon_profile.svg';
 String icLogout = '${svgImages}icon_logout.svg';
 String icSearch = '${svgImages}icon_search.svg';
-
-
-
-
-
-
+String icFriend = '${svgImages}icon_friends.svg';
+String icLeaderboard = '${svgImages}icon_leaderboard.svg';
+String icTag = '${svgImages}icon_tag.svg';
+String icStopwatch = '${svgImages}icon_stopwatch.svg';
+String icTimer = '${svgImages}icon_timer.svg';
