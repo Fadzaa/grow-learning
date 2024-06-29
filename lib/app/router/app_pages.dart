@@ -1,5 +1,9 @@
 import 'package:get/get.dart';
 
+
+import 'package:grow_learning/app/pages/features/profile_page/profile_page_binding.dart';
+import 'package:grow_learning/app/pages/features/profile_page/profile_page_view.dart';
+
 import 'package:grow_learning/app/pages/features/leaderboard_page/leader_page_binding.dart';
 import 'package:grow_learning/app/pages/features/leaderboard_page/leader_page_view.dart';
 
@@ -21,6 +25,7 @@ part 'app_routes.dart';
 
 class AppPages {
   AppPages._();
+
 
 
   static const INITIAL = Routes.HOME_PAGE;
@@ -68,6 +73,12 @@ class AppPages {
       name: _Paths.OTP_VERIFICATION_PAGE,
       page: () => const OtpPageView(),
       binding: OtpPageBinding(),
+      transition: Transition.noTransition,
+    ),
+    GetPage(
+      name: _Paths.PROFILE_PAGE,
+      page: () =>  ProfilePageView(),
+      binding: ProfilePageBinding(),
       transition: Transition.noTransition,
     ),
   ];
