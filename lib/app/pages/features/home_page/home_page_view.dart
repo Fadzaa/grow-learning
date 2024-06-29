@@ -4,6 +4,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:grow_learning/app/pages/features/home_page/tab-view/stopwatch_view.dart';
+import 'package:grow_learning/app/pages/features/home_page/tab-view/timer_view.dart';
 import 'package:grow_learning/app/router/app_pages.dart';
 import 'package:grow_learning/common/constant.dart';
 import 'package:grow_learning/common/theme.dart';
@@ -99,10 +100,11 @@ class HomePageView extends GetView<HomePageController> {
 
             Expanded(
               child: TabBarView(
+                  physics: const NeverScrollableScrollPhysics(),
                   controller: controller.tabController,
-                  children: [
-                    const StopwatchView(),
-                    Container(child: Center(child: Text('Timer'),))
+                  children: const [
+                    StopwatchView(),
+                    TimerView()
                   ]
               ),
             )

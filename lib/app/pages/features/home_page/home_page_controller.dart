@@ -17,6 +17,11 @@ class HomePageController extends GetxController with SingleGetTickerProviderMixi
   RxString countDown = '00:00'.obs;
   RxInt count = 0.obs;
 
+  RxString countDownTimer = '00:00'.obs;
+  RxInt countTimer = 0.obs;
+
+
+
   @override
   void onInit() {
     super.onInit();
@@ -45,6 +50,23 @@ class HomePageController extends GetxController with SingleGetTickerProviderMixi
         countDown.value = '0$minute:0$second';
       } else {
         countDown.value = '0$minute:$second';
+      }
+    });
+  }
+
+  void startTimer() {
+    const oneSec = Duration(seconds: 1);
+    Timer.periodic(oneSec, (Timer timer) {
+      countTimer.value--;
+      int minute = int.parse(countDownTimer.value.split(':')[0]);
+      int second = int.parse(countDownTimer.value.split(':')[1]);
+      minute = countTimer.value ~/ 60;
+      second = countTimer.value % 60;
+
+      if(second < 10) {
+        countDownTimer.value = '0$minute:0$second';
+      } else {
+        countDownTimer.value = '0$minute:$second';
       }
     });
   }
@@ -80,4 +102,6 @@ class HomePageController extends GetxController with SingleGetTickerProviderMixi
     list_activity.value = list_activity.where((element) => element.title.contains(value)).toList();
     update();
   }
+
+  RxDouble currentValueSlider = 0.0.obs;
 }
