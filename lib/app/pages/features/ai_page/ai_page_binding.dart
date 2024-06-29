@@ -1,10 +1,10 @@
 import 'package:get/get.dart';
-import 'leader_page_controller.dart';
+import 'ai_page_controller.dart';
 
 
-class LeaderPageBinding extends Bindings {
+class AiPageBinding extends Bindings {
   @override
   void dependencies() {
-    Get.lazyPut<LeaderPageController>(() => LeaderPageController());
+    Get.lazyPut<AiPageController>(() => AiPageController());
   }
 }

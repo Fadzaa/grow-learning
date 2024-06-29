@@ -1,4 +1,6 @@
 import 'package:get/get.dart';
+import 'package:grow_learning/app/pages/features/ai_page/ai_page_binding.dart';
+import 'package:grow_learning/app/pages/features/ai_page/ai_page_view.dart';
 
 import 'package:grow_learning/app/pages/features/leaderboard_page/leader_page_binding.dart';
 import 'package:grow_learning/app/pages/features/leaderboard_page/leader_page_view.dart';
@@ -27,6 +29,12 @@ class AppPages {
 
 
   static final routes = [
+    GetPage(
+      name: _Paths.HOME_PAGE,
+      page: () => AiPageView(),
+      binding: AiPageBinding(),
+      transition: Transition.noTransition,
+    ),
     GetPage(
       name: _Paths.HOME_PAGE,
       page: () => HomePageView(),

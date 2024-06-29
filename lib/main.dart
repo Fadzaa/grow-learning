@@ -1,10 +1,15 @@
+import 'package:camera/camera.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import 'app/router/app_pages.dart';
 
-void main() {
-  runApp(const MyApp());
+
+
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
