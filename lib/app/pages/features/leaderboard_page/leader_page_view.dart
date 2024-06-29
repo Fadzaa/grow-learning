@@ -30,7 +30,7 @@ class Leaderboard extends StatelessWidget {
                   height: 20,
                 ),
                 ToggleSwitch(
-                  minWidth: MediaQuery.of(context).size.width / 3,
+                  minWidth: MediaQuery.of(context).size.width / 2.5,
                   customTextStyles: [
                     tsLabelLarge.copyWith(
                         fontSize: 15,
@@ -39,13 +39,15 @@ class Leaderboard extends StatelessWidget {
                     tsLabelLarge.copyWith(
                         fontSize: 15,
                         fontWeight: FontWeight.bold,
-                        color: Colors.white)
+                        color: Colors.white),
+
                   ],
                   cornerRadius: 20.0,
                   activeBgColors: [
                     const [primaryColor],
                     const [primaryColor]
                   ],
+
                   activeFgColor: Colors.white,
                   inactiveBgColor: Colors.white,
                   inactiveFgColor: Color(0xffa8a8a8),
@@ -116,6 +118,7 @@ class Leaderboard extends StatelessWidget {
           style: tsLabelLarge.copyWith(
             fontSize: 11,
             fontWeight: FontWeight.w600,
+              color: Colors.black
           )),
     );
   }
