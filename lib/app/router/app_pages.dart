@@ -3,6 +3,8 @@ import 'package:get/get.dart';
 import 'package:grow_learning/app/pages/features/leaderboard_page/leader_page_binding.dart';
 import 'package:grow_learning/app/pages/features/leaderboard_page/leader_page_view.dart';
 
+import '../pages/features/activity_done_page/activity_done_page_binding.dart';
+import '../pages/features/activity_done_page/activity_done_page_view.dart';
 import '../pages/features/home_page/home_page_binding.dart';
 import '../pages/features/home_page/home_page_view.dart';
 
@@ -23,7 +25,7 @@ class AppPages {
   AppPages._();
 
 
-  static const INITIAL = Routes.HOME_PAGE;
+  static const INITIAL = Routes.ACTIVITY_DONE_PAGE;
 
 
   static final routes = [
@@ -68,6 +70,12 @@ class AppPages {
       name: _Paths.OTP_VERIFICATION_PAGE,
       page: () => const OtpPageView(),
       binding: OtpPageBinding(),
+      transition: Transition.noTransition,
+    ),
+    GetPage(
+      name: _Paths.ACTIVITY_DONE_PAGE,
+      page: () => const ActivityDonePageView(),
+      binding: ActivityDonePageBinding(),
       transition: Transition.noTransition,
     ),
   ];
