@@ -92,6 +92,10 @@ class HomePageController extends GetxController
       'countdown': countDown.value
     };
     Get.toNamed("/activity-done-page", arguments: dataToSend);
+
+    countDown.value = '00:00';
+    path.value = "Golden Barrel";
+    name.value = "assets/image/golden_barrel_full.png";
   }
 
   void startTimer() {
