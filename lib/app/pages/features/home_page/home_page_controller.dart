@@ -17,8 +17,8 @@ class HomePageController extends GetxController
   TabController? tabController;
   RxBool isRating = false.obs;
 
-  RxString name = "".obs;
-  RxString path = "".obs;
+  RxString name = "Golden Barrel".obs;
+  RxString path = "assets/image/golden_barrel_full.png".obs;
 
   RxBool IsStart = false.obs;
 
@@ -73,11 +73,11 @@ class HomePageController extends GetxController
 
 
   int timeToMinutes(String timeString) {
-    List<String> parts = timeString.split(':'); // Memecah string berdasarkan titik dua (:)
-    int hours = int.parse(parts[0]); // Mengambil jam dan mengonversi ke integer
-    int minutes = int.parse(parts[1]); // Mengambil menit dan mengonversi ke integer
+    List<String> parts = timeString.split(':');
+    int hours = int.parse(parts[0]);
+    int minutes = int.parse(parts[1]);
 
-    return hours * 60 + minutes; // Menghitung total menit
+    return hours * 60 + minutes;
   }
 
   void stopStopwatch() {
