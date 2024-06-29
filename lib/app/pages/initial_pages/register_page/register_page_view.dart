@@ -15,7 +15,8 @@ class RegisterPageView extends GetView<RegisterPageController> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-          child: Padding(
+          child: Container(
+            color: Colors.white,
             padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 30),
             child: Column(
                 crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -92,7 +93,7 @@ class RegisterPageView extends GetView<RegisterPageController> {
                   CommonButton(
                     text: "Register",
                     onPressed: () {
-                      Get.offAllNamed(Routes.HOME_PAGE);
+                      Get.offAllNamed(Routes.OTP_VERIFICATION_PAGE);
                     },
                     height: 45,
                   ),
