@@ -74,6 +74,14 @@ class StatisticPage extends GetView<StatisticPageController> {
               SizedBox(
                 height: 25,
               ),
+
+
+              Obx( ()=> controller.chartData.value.length == 0 ?
+                  Center(
+                    child: Text("Kamu Belum Belajar Hari ini"),
+                  )
+                  :
+
               SizedBox(
                 height: 200,
                 child: SfCircularChart(
@@ -89,13 +97,15 @@ class StatisticPage extends GetView<StatisticPageController> {
                   series: [
                     DoughnutSeries<GDPData, String>(
                       dataSource: controller.chartData,
-                      xValueMapper: (GDPData data, _) => data.continent,
-                      yValueMapper: (GDPData data, _) => data.gdp,
+                      xValueMapper: (GDPData data, _) => data.nama,
+                      yValueMapper: (GDPData data, _) => data.hour,
                       dataLabelSettings: DataLabelSettings(isVisible: true),
                     )
                   ],
                 ),
               ),
+              ),
+
               SizedBox(
                 height: 25,
               ),

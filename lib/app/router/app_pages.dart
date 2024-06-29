@@ -1,11 +1,11 @@
 import 'package:get/get.dart';
-
 import 'package:grow_learning/app/pages/features/ai_page/ai_page_binding.dart';
 import 'package:grow_learning/app/pages/features/ai_page/ai_page_view.dart';
-import 'package:grow_learning/app/pages/features/friends_page/friends_page_binding.dart';
-import 'package:grow_learning/app/pages/features/friends_page/friends_page_view.dart';
+
+
 import 'package:grow_learning/app/pages/features/profile_page/profile_page_binding.dart';
 import 'package:grow_learning/app/pages/features/profile_page/profile_page_view.dart';
+
 import 'package:grow_learning/app/pages/features/leaderboard_page/leader_page_binding.dart';
 import 'package:grow_learning/app/pages/features/leaderboard_page/leader_page_view.dart';
 import 'package:grow_learning/app/pages/features/statistic_page/statistic_page_binding.dart';
@@ -33,7 +33,10 @@ part 'app_routes.dart';
 class AppPages {
   AppPages._();
 
-  static const INITIAL = Routes.STATISTIK_PAGE;
+
+
+  static const INITIAL = Routes.HOME_PAGE;
+
 
   static final routes = [
     GetPage(
@@ -101,12 +104,6 @@ class AppPages {
       name: _Paths.ACTIVITY_DONE_PAGE,
       page: () => const ActivityDonePageView(),
       binding: ActivityDonePageBinding(),
-      transition: Transition.noTransition,
-    ),
-    GetPage(
-      name: _Paths.FRIENDS_PAGE,
-      page: () =>  FriendsPageView(),
-      binding: FriendsPageBinding(),
       transition: Transition.noTransition,
     ),
   ];

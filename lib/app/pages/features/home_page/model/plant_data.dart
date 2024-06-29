@@ -14,10 +14,7 @@ List<PlantData> plantData = [
     name: 'Cereus',
     image: plantCereusFull,
   ),
-  PlantData(
-    name: 'Geranium',
-    image: plantGeraniumFull,
-  ),
+
   PlantData(
     name: 'Sukulen',
     image: plantSukulenFull,

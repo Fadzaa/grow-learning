@@ -9,9 +9,20 @@ class ActivityDonePageController extends GetxController {
   RxString time = '120:30'.obs;
   RxInt xp = 0.obs;
 
+  var name = ''.obs;
+  var path = ''.obs;
+  var countDown = ''.obs;
+
+
   onInit() {
     super.onInit();
-    xpCounter();
+    if (Get.arguments != null) {
+      var data = Get.arguments as Map<String, String>;
+      name.value = data['name'] ?? "";
+      path.value = data['path'] ?? "";
+      countDown.value = data['countdown'] ?? "";
+    }
+
   }
 
   int convertTimeToSeconds(String time) {
@@ -21,8 +32,8 @@ class ActivityDonePageController extends GetxController {
     return (minutes * 60) + seconds;
   }
 
-  void xpCounter() {
-    int totalSeconds = convertTimeToSeconds(time.value);
-    xp.value = (totalSeconds / 30 * 5).round();
+  String xpCounter(String value) {
+    int totalSeconds = convertTimeToSeconds(value);
+    return (totalSeconds / 30 * 5).round().toString();
   }
 }

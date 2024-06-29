@@ -9,6 +9,7 @@ class CommonButton extends StatelessWidget {
     required this.text,
     required this.onPressed,
     this.width,
+    this.color,
     this.height,
     this.style,
     this.borderRadius
@@ -17,6 +18,7 @@ class CommonButton extends StatelessWidget {
   String text;
   double? width;
   double? height;
+  Color? color;
   VoidCallback? onPressed;
   TextStyle? style;
   double? borderRadius;
@@ -26,11 +28,12 @@ class CommonButton extends StatelessWidget {
     return ElevatedButton(
         onPressed: onPressed ?? null,
         style: ElevatedButton.styleFrom(
-            backgroundColor: primaryColor,
+            backgroundColor: color ??  primaryColor,
             fixedSize: Size(width ?? double.maxFinite, height ?? 0),
             shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(borderRadius ?? 16)
             ),
+
             disabledBackgroundColor: const Color(0xFFBABABA)
         ),
         child: Text(

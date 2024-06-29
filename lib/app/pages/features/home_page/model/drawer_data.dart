@@ -12,7 +12,7 @@ List<DrawerData> drawerData = [
   DrawerData(
     title: 'Insight',
     icon: icInsight,
-    route: '/',
+    route: '/statistic-page',
   ),
   DrawerData(
     title: 'Profile',
