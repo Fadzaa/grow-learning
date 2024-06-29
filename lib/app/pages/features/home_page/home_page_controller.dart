@@ -32,6 +32,11 @@ class HomePageController extends GetxController
 
   late Timer _timer;
 
+  RxString countDownTimer = '00:00'.obs;
+  RxInt countTimer = 0.obs;
+
+
+
   @override
   void onInit() {
     super.onInit();
@@ -89,6 +94,23 @@ class HomePageController extends GetxController
     Get.toNamed("/activity-done-page", arguments: dataToSend);
   }
 
+  void startTimer() {
+    const oneSec = Duration(seconds: 1);
+    Timer.periodic(oneSec, (Timer timer) {
+      countTimer.value--;
+      int minute = int.parse(countDownTimer.value.split(':')[0]);
+      int second = int.parse(countDownTimer.value.split(':')[1]);
+      minute = countTimer.value ~/ 60;
+      second = countTimer.value % 60;
+
+      if(second < 10) {
+        countDownTimer.value = '0$minute:0$second';
+      } else {
+        countDownTimer.value = '0$minute:$second';
+      }
+    });
+  }
+
   RxBool isActivitySelected = false.obs;
   TextEditingController searchController = TextEditingController();
   TextEditingController activityController = TextEditingController();
@@ -121,4 +143,6 @@ class HomePageController extends GetxController
         .toList();
     update();
   }
+
+  RxDouble currentValueSlider = 0.0.obs;
 }
