@@ -6,42 +6,42 @@ List<UserList> data = [
       userDate: DateTime.now()),
   UserList(
       userImage: "assets/image/user2.png",
-      userName: "Yasa Kafi",
+      userName: "Zulkifli",
       userPoin: "1,899 Quiz Points",
       userDate: DateTime.now()),
   UserList(
       userImage: "assets/image/user3.png",
-      userName: "Yasa Kafi",
+      userName: "Ridho",
       userPoin: "1,899 Quiz Points",
       userDate: DateTime.now()),
   UserList(
       userImage: "assets/image/user4.png",
-      userName: "Yasa Kafi",
+      userName: "Powiu",
       userPoin: "1,899 Quiz Points",
       userDate: DateTime.now()),
   UserList(
       userImage: "assets/image/user5.png",
-      userName: "Yasa Kafi",
+      userName: "Razzan",
       userPoin: "1,899 Quiz Points",
       userDate: DateTime.now()),
   UserList(
       userImage: "assets/image/user5.png",
-      userName: "Yasa Kafi",
+      userName: "Royyan",
       userPoin: "1,899 Quiz Points",
       userDate: DateTime.now()),
   UserList(
       userImage: "assets/image/user6.png",
-      userName: "Yasa Kafi",
+      userName: "Ahmad",
       userPoin: "1,899 Quiz Points",
       userDate: DateTime.now()),
   UserList(
       userImage: "assets/image/user7.png",
-      userName: "Yasa Kafi",
+      userName: "Dio",
       userPoin: "1,899 Quiz Points",
       userDate: DateTime.now()),
   UserList(
       userImage: "assets/image/user7.png",
-      userName: "Yasa Kafi",
+      userName: "William",
       userPoin: "1,899 Quiz Points",
       userDate: DateTime.now()),
 

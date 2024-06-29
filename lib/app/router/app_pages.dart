@@ -33,7 +33,7 @@ part 'app_routes.dart';
 class AppPages {
   AppPages._();
 
-  static const INITIAL = Routes.STATISTIK_PAGE;
+  static const INITIAL = Routes.SPLASH_PAGE;
 
   static final routes = [
     GetPage(
@@ -107,6 +107,12 @@ class AppPages {
       name: _Paths.FRIENDS_PAGE,
       page: () =>  FriendsPageView(),
       binding: FriendsPageBinding(),
+      transition: Transition.noTransition,
+    ),
+    GetPage(
+      name: _Paths.LEADERBOARD_PAGE,
+      page: () =>  const Leaderboard(),
+      binding: LeaderPageBinding(),
       transition: Transition.noTransition,
     ),
   ];
