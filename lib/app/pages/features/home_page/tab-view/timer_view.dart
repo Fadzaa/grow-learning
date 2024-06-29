@@ -43,7 +43,7 @@ class TimerView extends GetView<HomePageController> {
             SleekCircularSlider(
               min: 0,
               max: 7200,
-              initialValue: controller.currentValueSlider.value,
+              initialValue: controller.countDownTimer.value.split(':').map(int.parse).reduce((a, b) => a * 60 + b).toDouble(),
               appearance: CircularSliderAppearance(
                   size: 280,
                   startAngle: 270,
@@ -55,6 +55,13 @@ class TimerView extends GetView<HomePageController> {
                     dotColor: primaryColor,
                     trackColor: greyColor
                   ),
+
+                infoProperties: InfoProperties(
+                  mainLabelStyle: GoogleFonts.urbanist(
+                    color: Colors.transparent,
+                  ),
+
+                )
               ),
               onChange: (double value) {
                 int newMinutes = value ~/ 60;
@@ -114,7 +121,22 @@ class TimerView extends GetView<HomePageController> {
           ),
         ),),
 
-        Padding(
+        Obx(() => controller.isStartTimer == true
+            ? Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 35),
+          child: CommonButton(
+            text: 'Berhenti Belajar',
+            onPressed: () => controller.stopTimer(),
+            height: 48,
+            color: dangerColor,
+            style: GoogleFonts.urbanist(
+              fontSize: 20,
+              color: Colors.white,
+              fontWeight: FontWeight.w600,
+
+            ),),
+        )
+            : Padding(
           padding: const EdgeInsets.symmetric(horizontal: 35),
           child: CommonButton(
             text: 'Mulai Belajar',
@@ -126,6 +148,7 @@ class TimerView extends GetView<HomePageController> {
               fontWeight: FontWeight.w600,
 
             ),),
+        )
         )
       ],
     );
