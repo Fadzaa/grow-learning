@@ -5,13 +5,13 @@ import 'package:get/get.dart';
 
 class AiPageController extends GetxController {
 
-  late List<CameraDescription> cameras;
+   RxList<CameraDescription> cameras = <CameraDescription>[].obs;
 
 
   @override
   void onInit() async{
     super.onInit();
-    cameras = await availableCameras();
+    // cameras = await availableCameras();
   }
 
 

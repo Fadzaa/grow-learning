@@ -1,6 +1,7 @@
 import 'package:camera/camera.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:grow_learning/app/pages/features/ai_page/ai_page_controller.dart';
 
 import 'app/router/app_pages.dart';
 

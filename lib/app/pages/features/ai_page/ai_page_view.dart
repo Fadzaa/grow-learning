@@ -13,21 +13,23 @@ import 'package:grow_learning/app/pages/features/ai_page/ai_page_controller.dart
 
 
 class AiPageView extends StatefulWidget {
+  AiPageView({Key? key}) : super(key: key);
 
   @override
   _AiPageViewState createState() => _AiPageViewState();
 }
 
 class _AiPageViewState extends State<AiPageView> {
-  AiPageController getcontroller = Get.put(AiPageController());
 
+
+  AiPageController getController = Get.put(AiPageController());
 
   dynamic controller;
   bool isBusy = false;
   dynamic faceDetector;
   late Size size;
   late List<Face> faces;
-  late CameraDescription description = getcontroller.cameras[1];
+  late CameraDescription description = getController.cameras[1];
   CameraLensDirection camDirec = CameraLensDirection.front;
   @override
   void initState() {
@@ -85,7 +87,7 @@ class _AiPageViewState extends State<AiPageView> {
     // it is used in android to convert the InputImage from Dart to Java
     // `rotation` is not used in iOS to convert the InputImage from Dart to Obj-C
     // in both platforms `rotation` and `camera.lensDirection` can be used to compensate `x` and `y` coordinates on a canvas
-    final camera = getcontroller.cameras[1];
+    final camera = getController.cameras[1];
     final sensorOrientation = camera.sensorOrientation;
     InputImageRotation? rotation;
     if (Platform.isIOS) {
@@ -155,10 +157,10 @@ class _AiPageViewState extends State<AiPageView> {
   void _toggleCameraDirection() async {
     if (camDirec == CameraLensDirection.back) {
       camDirec = CameraLensDirection.front;
-      description = getcontroller.cameras[1];
+      description = getController.cameras[1];
     } else {
       camDirec = CameraLensDirection.back;
-      description = getcontroller.cameras[0];
+      description = getController.cameras[0];
     }
     await controller.stopImageStream();
     // await controller.dispose();

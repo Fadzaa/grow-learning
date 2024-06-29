@@ -30,7 +30,7 @@ class AppPages {
 
   static final routes = [
     GetPage(
-      name: _Paths.HOME_PAGE,
+      name: _Paths.AI_PAGE,
       page: () => AiPageView(),
       binding: AiPageBinding(),
       transition: Transition.noTransition,
