@@ -2,25 +2,24 @@ import 'package:camera/camera.dart';
 import 'package:get/get.dart';
 
 class GDPData {
-  GDPData(this.continent, this.gdp);
+  GDPData(this.nama, this.hour);
 
-  final String continent;
-  final int gdp;
+  final String nama;
+  final int hour;
 }
 
 class StatisticPageController extends GetxController {
-  late List<GDPData> chartData;
+  RxList<GDPData> chartData = <GDPData>[].obs;
+
+
+  String resultTime = "";
+
 
   @override
   void onInit() async {
     super.onInit();
 
-    chartData = [
-      GDPData('Oceanis', 1600),
-      GDPData('Africa', 2490),
-      GDPData('S America', 2900),
-      GDPData('Europe', 23050)
-    ];
+
   }
 
   @override

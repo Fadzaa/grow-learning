@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-const Color baseColor = Color(0xFFFAFAFA);
+const Color baseColor = Color(0xFFFFFFFF);
 const Color baseColor50 = Color(0xFFF8F8F8);
 const Color primaryColor = Color(0xFF30E985);
 const Color blackColor = Color(0xFF1D1D1D);
 const Color greyColor = Color(0xFF707070);
 const Color greyColor10 = Color(0xFF7B7B7B);
+const Color greySoft = Color(0xFFD9D9D9);
 const Color secondaryColor = Color(0xFFF654AE);
 const Color warningColor = Color(0xFFD3A500);
 const Color warningColorLight = Color(0xFFFCFCDD);

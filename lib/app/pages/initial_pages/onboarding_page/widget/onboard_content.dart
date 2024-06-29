@@ -22,7 +22,7 @@ class OnboardContent extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          Image.asset(image),
+          SvgPicture.asset(image),
           Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
