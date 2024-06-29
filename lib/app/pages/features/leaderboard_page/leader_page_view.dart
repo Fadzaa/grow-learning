@@ -1,9 +1,12 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:get/get.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:grow_learning/common/theme.dart';
 import 'package:toggle_switch/toggle_switch.dart';
 
+import '../../../router/app_pages.dart';
 import 'datasources.dart';
 
 class Leaderboard extends StatelessWidget {
@@ -19,11 +22,29 @@ class Leaderboard extends StatelessWidget {
             padding: EdgeInsets.symmetric(horizontal: 13),
             child: Column(
               children: [
-                Text(
-                  "LeaderBoard",
-                  style: tsLabelLarge.copyWith(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 20,
+                Padding(
+                  padding: const EdgeInsets.only(top: 20,  left: 10),
+                  child: Row(
+                    children: [
+                      InkWell(
+                        onTap: () {
+                          Get.offAllNamed(Routes.HOME_PAGE);
+                        },
+                        child: const Icon(Icons.arrow_back_ios, color: blackColor, size: 25,),
+                      ),
+
+                      const Spacer(),
+
+                      Text('Leaderboard',
+                        style: GoogleFonts.urbanist(
+                            color: blackColor,
+                            fontSize: 20,
+                            fontWeight: FontWeight.w700
+                        ),),
+
+                      const Spacer()
+
+                    ],
                   ),
                 ),
                 SizedBox(

@@ -5,14 +5,9 @@ import 'drawer.dart';
 
 List<DrawerData> drawerData = [
   DrawerData(
-    title: 'Home',
-    icon: icHome,
-    route: Routes.HOME_PAGE,
-  ),
-  DrawerData(
-    title: 'Insight',
+    title: 'Statistic',
     icon: icInsight,
-    route: '/statistic-page',
+    route: Routes.STATISTIK_PAGE,
   ),
   DrawerData(
     title: 'Profile',
@@ -22,7 +17,7 @@ List<DrawerData> drawerData = [
   DrawerData(
     title: 'Friends',
     icon: icFriend,
-    route: '/',
+    route: Routes.FRIENDS_PAGE,
   ),
   DrawerData(
     title: 'Tag Activity',
