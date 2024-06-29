@@ -35,7 +35,7 @@ class HomePageController extends GetxController
 
 
   RxString countDownTimer = '00:00'.obs;
-  RxInt countTimer = 0.obs;
+  RxInt countTimer = 7200.obs;
 
   late Timer _timerTimer;
 
@@ -99,7 +99,7 @@ class HomePageController extends GetxController
   void startTimer() {
     isStartTimer.value = true;
     const oneSec = Duration(seconds: 1);
-    Timer.periodic(oneSec, (Timer timer) {
+    _timerTimer = Timer.periodic(oneSec, (Timer timer) {
       countTimer.value--;
       int minute = int.parse(countDownTimer.value.split(':')[0]);
       int second = int.parse(countDownTimer.value.split(':')[1]);
@@ -110,24 +110,19 @@ class HomePageController extends GetxController
         countDownTimer.value = '0$minute:0$second';
       }
       else {
-        countDownTimer.value = '0$minute:$second';
+        countDownTimer.value = '$minute:$second';
       }
     });
   }
 
   void stopTimer() {
-    isStartTimer.value = false;
-    countTimer.value = 0;
-    countDownTimer.value = '00:00';
-
-    _timerTimer.cancel();
-
     Get.put(StatisticPageController()).chartData.add(GDPData(name.value, timeToMinutes(countDown.value)));
-
+    isStartTimer.value = false;
+    _timerTimer.cancel();
     var dataToSend = {
       'name': name.value,
       'path': path.value,
-      'countdown': countDownTimer.value
+      'countdown': countDown.value
     };
     Get.toNamed("/activity-done-page", arguments: dataToSend);
   }
